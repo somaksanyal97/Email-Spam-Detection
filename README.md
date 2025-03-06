@@ -67,6 +67,8 @@ Also, deep learning models - RNN, LSTM, and GRU are trained using pre-trained Wo
 The final implementation is in email spam dectection project is using DistilBERT (a lighter and faster version of BERT - Bidirectional Encoder Representations from Transformers), a transformer-based deep learning model. It starts by loading and preprocessing the dataset, removing duplicates and missing values. The text data is split into training and testing sets, and DistilBERT's tokenizer is applied to convert text into tokenized inputs with attention masks. The processed data is wrapped in Hugging Face's Dataset format for compatibility with transformer models. DistilBertForSequenceClassification is loaded with pretrained weights from "distilbert-base-uncased". A DistilBERT model is initialized for binary classification, and training is performed using the Trainer API with three epochs, batch size of 8, and epoch-based evaluation and saving strategies. After training, the model is evaluated using accuracy, precision, recall, and F1-score, and a confusion matrix is plotted to visualize classification performance. The code implementation can be found [here](https://github.com/somaksanyal97/Email-Spam-Detection/blob/main/Email_Spam_BERT_%2B_Transformer.ipynb). 
 
 ## Performance Metrics of transformer based DL model using DistilBERT
+| Model        | Accuracy   | Precision | Recall   | F1 Score |
+|----------------|-----------|--------------------|----------------|-----------|
 | Transformer based DL model | 0.98 | 0.97   | 0.98 | 0.97 |   |
 
 
