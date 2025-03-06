@@ -36,4 +36,12 @@ Important to note here, the Naive Bayes classifier assumes that features (words)
 | Decision Tree | 0.93 | 0.93     | 0.93 | 0.93 |  {'max_depth': None}   |
 | Random Forest | 0.98 | 0.98    | 0.98 | 0.98 |   {'max_depth': None, 'n_estimators': 100} |
 
+## Performance Metrics of ML Algorithms with TfidfVectorizer
 
+| Model        | Accuracy   | Precision | Recall   | F1 Score | Best Parameters |
+|----------------|-----------|--------------------|----------------|-----------|--------------------|
+| Naive Bayes | 0.98 | 0.98    | 0.98 | 0.98 |  {'alpha': 0.5}   |
+| Logistic Regression | 0.98 | 0.98    | 0.98 | 0.98 |   {'C': 10}   |
+| K-Nearest Neighbors | 0.55 | 0.83    | 0.55 | 0.55 |    {'n_neighbors': 3}   |
+| Decision Tree | 0.94 | 0.94     | 0.94 | 0.94 |  {'max_depth': None}   |
+| Random Forest | 0.98 | 0.98     | 0.98 | 0.98 |   {'max_depth': None, 'n_estimators': 200} |
