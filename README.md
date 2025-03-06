@@ -14,3 +14,9 @@ Subsequently, the following pre-processing steps were implemented - the data was
 
 ## Feature Engineering
 The cleaned text is converted to numerical feature representations using CountVectorizer and Tfidf Vectorizer with a maximum of 6000 features. The text is converted to Word2Vec embeddings by looking up pre-trained Word2Vec vectors and transformed into 500 dimensional vectors. The word2Vec embedding has been mostly used for all the algorithms in this project and they are able to hold the context of the text which is essential in determination of the output. <br>
+
+## Oversampling
+The dataset is then split into training and test datasets and SMOTE is applied to address the class imbalance in the dataset. <br>
+
+## Training and evaluation
+ 
