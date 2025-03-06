@@ -19,4 +19,9 @@ The cleaned text is converted to numerical feature representations using CountVe
 The dataset is then split into training and test datasets and SMOTE is applied to address the class imbalance in the dataset. <br>
 
 ## Training and evaluation
- 
+Several classifiers are trained using GridSearchCV to optimize hyperparameters. The models are evaluated based on accuracy, precision, recall, and F1-score, and confusion matrices are plotted to visualize performance. The script iterates through different classifiers for each feature extraction method and selects the best-performing model.
+As this is a spam detection project, the precision is priotised the most to handle the false negatives in the output. 
+
+In the first part of the code, traditional machine learning algorithms like Naive Bayes classifier, Logistic Regression, KNN Classifier, Decision Tree Classifier and Random Forest Classifier is implement with all the text vector representations from Count Vectorizer, Tfidf Vectorizer and Word2Vec. THe iterations were repeated over each classifier, performing hyperparameter tuning using GridSearchCV with 5-fold cross-validation on the oversampled training data. The best model was then used to make predictions on the test data, and performance metrics were calculated and stored. Confusion matrices and performance metrics were printed and visualized for each classifier.
+
+Important to note here, the Naive Bayes classifier assumes that features (words) are independent, but Word2Vec embeddings capture word dependencies and semantic relationships, violating this assumption. Additionally, Naive Bayes works best with discrete, count-based features (e.g., Bag-of-Words or TF-IDF), whereas Word2Vec produces dense, continuous vectors, making it incompatible with Naive Bayes' probability-based calculations. Thus Word2Vec was not used for Naive Bayes classifier. 
