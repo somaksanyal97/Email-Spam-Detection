@@ -72,3 +72,6 @@ The final implementation is in email spam dectection project is using DistilBERT
 | Transformer based DL model | 0.98 | 0.97   | 0.98 | 0.97 |   |
 
 
+## CONCLUSION
+
+This project successfully implements various machine learning and deep learning approaches for spam detection in emails. Traditional models like Naïve Bayes, Logistic Regression, Decision Trees, and Random Forests were evaluated alongside advanced techniques such as XGBoost, LightGBM, and AdaBoost, with hyperparameter tuning using GridSearchCV. Additionally, deep learning models, including RNN, LSTM, and GRU, were trained with Word2Vec embeddings, and a transformer-based approach using DistilBERT was implemented to leverage state-of-the-art natural language processing capabilities. The results show that DistilBERT and deep learning models outperform traditional machine learning classifiers in handling complex textual patterns, with further fine-tuning. Ultimately, transformer-based models offer superior accuracy and robustness, making them highly effective for real-world spam detection applications.
