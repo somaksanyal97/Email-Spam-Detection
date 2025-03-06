@@ -25,3 +25,15 @@ As this is a spam detection project, the precision is priotised the most to hand
 In the first part of the code, traditional machine learning algorithms like Naive Bayes classifier, Logistic Regression, KNN Classifier, Decision Tree Classifier and Random Forest Classifier is implement with all the text vector representations from Count Vectorizer, Tfidf Vectorizer and Word2Vec. THe iterations were repeated over each classifier, performing hyperparameter tuning using GridSearchCV with 5-fold cross-validation on the oversampled training data. The best model was then used to make predictions on the test data, and performance metrics were calculated and stored. Confusion matrices and performance metrics were printed and visualized for each classifier.
 
 Important to note here, the Naive Bayes classifier assumes that features (words) are independent, but Word2Vec embeddings capture word dependencies and semantic relationships, violating this assumption. Additionally, Naive Bayes works best with discrete, count-based features (e.g., Bag-of-Words or TF-IDF), whereas Word2Vec produces dense, continuous vectors, making it incompatible with Naive Bayes' probability-based calculations. Thus Word2Vec was not used for Naive Bayes classifier. 
+
+## Performance Metrics of ML Algorithms with CountVectorizer
+
+| Model        | Accuracy   | Precision | Recall   | F1 Score | Best Parameters |
+|----------------|-----------|--------------------|----------------|-----------|--------------------|
+| Naive Bayes | 0.98 | 0.98     | 0.98 | 0.98 |  {'alpha': 0.5}   |
+| Logistic Regression | 0.98 | 0.98    | 0.98 | 0.98 |   {'C': 10}   |
+| K-Nearest Neighbors | 0.79 | 0.88     | 0.79 | 0.80 |   {'n_neighbors': 3}   |
+| Decision Tree | 0.93 | 0.93     | 0.93 | 0.93 |  {'max_depth': None}   |
+| Random Forest | 0.98 | 0.98    | 0.98 | 0.98 |   {'max_depth': None, 'n_estimators': 100} |
+
+
