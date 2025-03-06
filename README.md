@@ -45,3 +45,22 @@ Important to note here, the Naive Bayes classifier assumes that features (words)
 | K-Nearest Neighbors | 0.55 | 0.83    | 0.55 | 0.55 |    {'n_neighbors': 3}   |
 | Decision Tree | 0.94 | 0.94     | 0.94 | 0.94 |  {'max_depth': None}   |
 | Random Forest | 0.98 | 0.98     | 0.98 | 0.98 |   {'max_depth': None, 'n_estimators': 200} |
+
+With the word2vec embeddings, several advanced ML algorithms such as XGBoost, LightGBM, and AdaBoost, are trained. GridSearchCV is used for hyperparameter tuning, optimizing parameters such as n_estimators (number of trees), learning_rate, and boosting_type. The implementation can be found [here](https://github.com/somaksanyal97/Email-Spam-Detection/blob/main/email_spam%20ML%20advanced.ipynb).
+
+Also, deep learning models - RNN, LSTM, and GRU are trained using pre-trained Word2Vec embeddings and Bidirectional layers for LSTM and GRU. Tokenization & Padding are applied to standardize input sequences. These models are compiled with Adam optimizer and trained using binary cross-entropy loss.
+
+## Performance Metrics of ML and DL Algorithms with Word2Vec embeddings
+
+| Model        | Accuracy   | Precision | Recall   | F1 Score | Best Parameters |
+|----------------|-----------|--------------------|----------------|-----------|--------------------|
+| Logistic Regression | 0.94 | 0.94    | 0.94 | 0.94 |   {'C': 10}   |
+| K-Nearest Neighbors | 0.94 | 0.95    | 0.94 | 0.94 |    {'n_neighbors': 3}   |
+| Decision Tree | 0.91 | 0.92    | 0.91 | 0.91 |  {'max_depth': 20}   |
+| Random Forest | 0.96 | 0.96     | 0.96 | 0.96 |   {'max_depth': 30, 'n_estimators': 100} |
+| XGBoost  | 0.97 | 0.96    | 0.97 | 0.97 |  {'learning_rate': 0.1, 'n_estimators': 100} |
+| LightGBM | 0.97 | 0.97     | 0.97 | 0.97 |   {'learning_rate': 0.1, 'n_estimators': 100} |
+| Adaboost | 0.89 | 0.89   | 0.89 | 0.89 |  {'learning_rate': 0.1, 'n_estimators': 100} |
+| RNN | 0.96 | 0.94   | 0.98 | 0.96 |   |
+| LSTM (Birdirectional) | 0.98 | 0.99   | 0.98 | 0.98 |   |
+| GRU (Bidirectional) | 0.98 | 0.99   | 0.97 | 0.98 |   |
