@@ -10,7 +10,7 @@ In this project, we have used email samples of 6046 entries and have implemented
 In the preprocessing pipeline for the email spam classification dataset, the dataset is cleaned. This involved removing unnecessary columns, filtering out rows where the 'Body' column was empty and removing duplicates. The data has been checked for null values. <br>
 
 ## Text Preprocessing
-Subsequently, the following pre-processing steps were implemented - the data was cleaned from non-alphabetical characters and stopwords, the text was converted to lowercase, split into individual words, and PorterS. I used stemming instead of lemmatization for this project because it is faster and I do not need the root form of the words to be meaningful for this project. The processed text was then compiled into a new list called corpus. <br>
+Subsequently, the following pre-processing steps were implemented - the data was cleaned from non-alphabetical characters and stopwords, the text was converted to lowercase, split into individual words, and PorterStemmer has been used for stemming. I used stemming instead of lemmatization for this project because it is faster and I do not need the root form of the words to be meaningful for this project. The processed text was then compiled into a new list called corpus. <br>
 
 ## Feature Engineering
 The cleaned text is converted to numerical feature representations using CountVectorizer and Tfidf Vectorizer with a maximum of 6000 features. The text is converted to Word2Vec embeddings by looking up pre-trained Word2Vec vectors and transformed into 500 dimensional vectors. The word2Vec embedding has been mostly used for all the algorithms in this project and they are able to hold the context of the text which is essential in determination of the output. <br>
@@ -46,7 +46,7 @@ Important to note here, the Naive Bayes classifier assumes that features (words)
 | Decision Tree | 0.94 | 0.94     | 0.94 | 0.94 |  {'max_depth': None}   |
 | Random Forest | 0.98 | 0.98     | 0.98 | 0.98 |   {'max_depth': None, 'n_estimators': 200} |
 
-With the word2vec embeddings, several advanced ML algorithms such as XGBoost, LightGBM, and AdaBoost, are trained. GridSearchCV is used for hyperparameter tuning, optimizing parameters such as n_estimators (number of trees), learning_rate, and boosting_type. The implementation can be found [here](https://github.com/somaksanyal97/Email-Spam-Detection/blob/main/email_spam%20ML%20advanced.ipynb).
+With the word2vec embeddings, several advanced ML algorithms such as XGBoost, LightGBM, AdaBoost and CatBoost are trained. GridSearchCV is used for hyperparameter tuning, optimizing parameters such as n_estimators (number of trees), learning_rate, and boosting_type. The implementation can be found [here](https://github.com/somaksanyal97/Email-Spam-Detection/blob/main/email_spam%20ML%20advanced.ipynb).
 
 Also, deep learning models - RNN, LSTM, and GRU are trained using pre-trained Word2Vec embeddings and Bidirectional layers for LSTM and GRU. Tokenization & Padding are applied to standardize input sequences. These models are compiled with Adam optimizer and trained using binary cross-entropy loss. The code implementation can be found [here](https://github.com/somaksanyal97/Email-Spam-Detection/blob/main/Email_Spam_DL.ipynb).
 ## Performance Metrics of ML and DL Algorithms with Word2Vec embeddings
