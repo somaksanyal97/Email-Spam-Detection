@@ -60,6 +60,7 @@ Also, deep learning models - RNN, LSTM, and GRU are trained using pre-trained Wo
 | XGBoost  | 0.97 | 0.96    | 0.97 | 0.97 |  {'learning_rate': 0.1, 'n_estimators': 100} |
 | LightGBM | 0.97 | 0.97     | 0.97 | 0.97 |   {'learning_rate': 0.1, 'n_estimators': 100} |
 | Adaboost | 0.89 | 0.89   | 0.89 | 0.89 |  {'learning_rate': 0.1, 'n_estimators': 100} |
+| Adaboost | 0.96 | 0.96   | 0.96 | 0.96 |  {'learning_rate': 0.1, 'iterations': 100} |
 | RNN | 0.96 | 0.94   | 0.98 | 0.96 |   |
 | LSTM (Birdirectional) | 0.98 | 0.99   | 0.98 | 0.98 |   |
 | GRU (Bidirectional) | 0.98 | 0.99   | 0.97 | 0.98 |   |
